@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://3yi05e1x3qv2"]
+
+[ext_resource type="Script" uid="uid://csq3pxpmejijn" path="res://scripts/projectile/projectile_player.gd" id="1_ba1op"]
+[ext_resource type="Texture2D" uid="uid://b1k2cynhb7t5o" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Casted/Casted1.png" id="1_dof3m"]
+[ext_resource type="Texture2D" uid="uid://y40xnb0vyuiu" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Casted/Casted2.png" id="2_ba1op"]
+[ext_resource type="Texture2D" uid="uid://dpu4eqqhgk7p6" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Casted/Casted3.png" id="3_j1sqn"]
+[ext_resource type="Texture2D" uid="uid://cxk5p276nd8uo" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Casted/Casted4.png" id="4_vlehc"]
+[ext_resource type="Texture2D" uid="uid://bq26l7l2dmtkc" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Dissipate/Dissipate1.png" id="16_wm7m8"]
+[ext_resource type="Texture2D" uid="uid://df3umd0bbu5lp" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Dissipate/Dissipate2.png" id="17_6xchw"]
+[ext_resource type="Texture2D" uid="uid://u3kt3xrai7jd" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Dissipate/Dissipate3.png" id="18_c52i4"]
+[ext_resource type="Texture2D" uid="uid://dibyjg8wcqbs7" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Dissipate/Dissipate4.png" id="19_y2ixl"]
+[ext_resource type="Texture2D" uid="uid://dnvxocrw2in8x" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Dissipate/Dissipate5.png" id="20_nix7i"]
+[ext_resource type="Texture2D" uid="uid://sytaxaktjoc4" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Hit/Hit1.png" id="21_nitlr"]
+[ext_resource type="Texture2D" uid="uid://ea3a0l33ek7q" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Hit/Hit2.png" id="22_iy0x3"]
+[ext_resource type="Texture2D" uid="uid://d0a8ukcs3i80" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Hit/Hit3.png" id="23_cqawt"]
+[ext_resource type="Texture2D" uid="uid://dju2kxjjj425j" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Hit/Hit4.png" id="24_ylibm"]
+[ext_resource type="Texture2D" uid="uid://wm0irkpplisn" path="res://assents/NightLord_v1.0.0/Sprites/Spells/TormentedSouls/Hit/Hit5.png" id="25_nrtgr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6w4a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dof3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ba1op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j1sqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vlehc")
+}],
+"loop": true,
+"name": &"casted",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_nitlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_iy0x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_cqawt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ylibm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_nrtgr")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smhxr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_wm7m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6xchw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_c52i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_y2ixl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nix7i")
+}],
+"loop": false,
+"name": &"dissipate",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smhxr"]
+size = Vector2(8, 15)
+
+[node name="Projectile" type="Area2D" unique_id=1262143720]
+script = ExtResource("1_ba1op")
+speed = 200.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=49801640]
+position = Vector2(6, 0)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_w6w4a")
+animation = &"hit"
+frame = 4
+frame_progress = 1.0
+
+[node name="DissipateSprite" type="AnimatedSprite2D" parent="." unique_id=1760120398]
+position = Vector2(6, 0)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_smhxr")
+animation = &"dissipate"
+frame = 4
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=412343240]
+position = Vector2(-1.5, 6.556708e-08)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_smhxr")

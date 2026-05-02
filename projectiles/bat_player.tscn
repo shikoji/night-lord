@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://qr3bdlej0k15"]
+
+[ext_resource type="Texture2D" uid="uid://cuxctf5g6i3dp" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/Idle/Idle1.png" id="1_2ajfl"]
+[ext_resource type="Texture2D" uid="uid://3qvud1ddhjdw" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/Bite/Bite1.png" id="1_s27mx"]
+[ext_resource type="Script" uid="uid://ce4yftslee1xa" path="res://scripts/projectile/bat_player.gd" id="1_u6jdn"]
+[ext_resource type="Texture2D" uid="uid://d33vjqy1j4hcm" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/Idle/Idle2.png" id="2_if6b0"]
+[ext_resource type="Texture2D" uid="uid://bvd6h2ubi268u" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/Bite/Bite2.png" id="2_u6jdn"]
+[ext_resource type="Texture2D" uid="uid://b1cws7c7k4bc7" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/Bite/Bite3.png" id="3_a2a8c"]
+[ext_resource type="Texture2D" uid="uid://bgny6f654qxti" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/Idle/Idle3.png" id="3_qtm5a"]
+[ext_resource type="Texture2D" uid="uid://b8wgtrb548x6v" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/Idle/Idle4.png" id="4_e25xq"]
+[ext_resource type="Texture2D" uid="uid://w6afax4kdl2u" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/Bite/Bite4.png" id="4_tcjg7"]
+[ext_resource type="Texture2D" uid="uid://cbg61eu38iomm" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/Bite/Bite5.png" id="5_nssnr"]
+[ext_resource type="Texture2D" uid="uid://bvlcnm36nt5ng" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/Idle/Idle5.png" id="5_sg3l0"]
+[ext_resource type="Texture2D" uid="uid://blae3ugdnm5y5" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/MoveBack/MoveBackpng1.png" id="11_wlehd"]
+[ext_resource type="Texture2D" uid="uid://b87y7sn02fduc" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/MoveBack/MoveBackpng2.png" id="12_anhrg"]
+[ext_resource type="Texture2D" uid="uid://cs0ro84s2yu17" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/MoveBack/MoveBackpng3.png" id="13_km0s8"]
+[ext_resource type="Texture2D" uid="uid://d1gh1j8xxp5yl" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/MoveBack/MoveBackpng4.png" id="14_6ummf"]
+[ext_resource type="Texture2D" uid="uid://dw1blaqkrxgwn" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/MoveBack/MoveBackpng5.png" id="15_bmdyt"]
+[ext_resource type="Texture2D" uid="uid://81ii6kbhbegu" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/TurnInBlood/TurnInBlood1.png" id="16_occje"]
+[ext_resource type="Texture2D" uid="uid://c07k2w8g0j8m1" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/TurnInBlood/TurnInBlood2.png" id="17_btpuu"]
+[ext_resource type="Texture2D" uid="uid://du5oigo4eldhe" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/TurnInBlood/TurnInBlood3.png" id="18_1x1pd"]
+[ext_resource type="Texture2D" uid="uid://dr22oy8cpic8x" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/TurnInBlood/TurnInBlood4.png" id="19_yt4nn"]
+[ext_resource type="Texture2D" uid="uid://dm14606cm2pqa" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/TurnInBlood/TurnInBlood5.png" id="20_wc3ln"]
+[ext_resource type="Texture2D" uid="uid://cipqxxipya8rw" path="res://assents/NightLord_v1.0.0/Sprites/Spells/Bat/TurnInBlood/TurnInBlood6.png" id="21_ykiin"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jy78j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s27mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u6jdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a2a8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tcjg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nssnr")
+}],
+"loop": false,
+"name": &"bite",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2ajfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_if6b0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qtm5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e25xq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sg3l0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_wlehd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_anhrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_km0s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6ummf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bmdyt")
+}],
+"loop": false,
+"name": &"moveback",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_occje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_btpuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1x1pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_yt4nn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wc3ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ykiin")
+}],
+"loop": false,
+"name": &"turninblood",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubie6"]
+size = Vector2(8, 12)
+
+[node name="bat" type="Area2D" unique_id=932973517]
+script = ExtResource("1_u6jdn")
+speed = 125.0
+return_speed = 150.0
+damage = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1079026387]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_jy78j")
+animation = &"turninblood"
+autoplay = "idle"
+frame = 5
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1005458871]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ubie6")
